@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchField } from '../SearchField/SearchField'
+import { SearchField } from '../InputField/InputField'
 import { TodoList } from '../TodoList/TodoList'
 import './App.css'
 
