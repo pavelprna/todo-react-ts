@@ -1,4 +1,4 @@
-import { FC, FormEventHandler, MouseEventHandler } from 'react'
+import { FC, FormEventHandler } from 'react'
 
 interface IInputFieldProps {
   value?: string

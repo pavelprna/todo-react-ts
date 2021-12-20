@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FormEventHandler, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../../store/todoSlice'
 import { InputField } from '../InputField/InputField'
@@ -9,7 +9,8 @@ function App() {
   const [text, setText] = useState('')
   const dispatch = useDispatch()
 
-  const addTask = () => {
+  const addTask: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault()
     dispatch(addTodo({ text }))
     setText('')
   }
