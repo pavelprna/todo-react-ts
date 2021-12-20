@@ -1,5 +1,6 @@
 import React from 'react'
 import { SearchField } from '../SearchField/SearchField'
+import { TodoList } from '../TodoList/TodoList'
 import './App.css'
 
 function App() {
@@ -10,17 +11,7 @@ function App() {
       </header>
       <main className="main">
         <SearchField />
-        <section className="todo">
-          <ul className="todo__list">
-            <li className="todo__item">
-              <input type="checkbox" className="todo__checkbox" />
-              <p className="todo__text"></p>
-              <button className="todo__button todo__button_type_remove">
-                &times;
-              </button>
-            </li>
-          </ul>
-        </section>
+        <TodoList />
       </main>
     </>
   )

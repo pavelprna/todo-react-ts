@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-interface ITodo {
+export interface ITodo {
   id: number
   text: string
   complited: boolean
