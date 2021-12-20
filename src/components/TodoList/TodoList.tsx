@@ -9,7 +9,7 @@ export const TodoList: FC = () => {
     <section className="todo">
       <ul className="todo__list">
         {todos.map((todo) => (
-          <TodoItem todo={todo} />
+          <TodoItem todo={todo} key={todo.id} />
         ))}
       </ul>
     </section>

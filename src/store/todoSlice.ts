@@ -23,8 +23,17 @@ const todoSlice = createSlice({
         complited: false,
       })
     },
-    removeTodo(state, action) {},
-    toggleTodo(state, action) {},
+    removeTodo(state, action) {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id)
+    },
+    toggleTodo(state, action) {
+      const toggledTodo = state.todos.find(
+        (todo) => todo.id === action.payload.id
+      )
+      if (toggledTodo) {
+        toggledTodo.complited = !toggledTodo.complited
+      }
+    },
   },
 })
 
