@@ -1,9 +1,9 @@
-import { FC, MouseEventHandler } from 'react'
+import { FC, FormEventHandler, MouseEventHandler } from 'react'
 
 interface IInputFieldProps {
   value?: string
   updateValue: (value: string) => void
-  handleSubmit: MouseEventHandler<HTMLButtonElement>
+  handleSubmit: FormEventHandler<HTMLFormElement>
 }
 
 export const InputField: FC<IInputFieldProps> = ({
@@ -12,7 +12,7 @@ export const InputField: FC<IInputFieldProps> = ({
   updateValue,
 }) => {
   return (
-    <form action="" className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="" className="form__label">
         <input
           type="text"
@@ -20,7 +20,7 @@ export const InputField: FC<IInputFieldProps> = ({
           value={value}
           onChange={(e) => updateValue(e.target.value)}
         />
-        <button type="button" className="form__submit" onClick={handleSubmit}>
+        <button type="submit" className="form__submit" disabled={!value}>
           add todo
         </button>
       </label>
