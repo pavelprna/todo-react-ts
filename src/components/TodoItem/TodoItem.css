@@ -1,0 +1,44 @@
+.todo__item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+  transition: background 200ms ease-in-out, color 300ms ease-in-out;
+  border: 1px solid var(--bg-active-color);
+  border-radius: 6px;
+}
+
+.todo__item:hover {
+  color: var(--text-active-color);
+  background: var(--bg-active-color);
+}
+
+.todo__text {
+  margin: 0;
+  flex: 1 100%;
+  transition: opacity 200ms ease-in-out;
+}
+
+.todo__text_completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.todo__button {
+  display: flex;
+  background: none;
+  border: none;
+  color: var(--bg-active-color);
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.5em;
+  transition: color 200ms ease-in-out;
+}
+
+.todo__item:hover .todo__button {
+  color: var(--text-color);
+}
+
+.todo__item:hover .todo__button:hover {
+  color: var(--text-active-color);
+}

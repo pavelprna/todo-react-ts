@@ -1,4 +1,5 @@
 import { FC, FormEventHandler } from 'react'
+import './InputField.css'
 
 interface IInputFieldProps {
   value?: string
@@ -12,15 +13,15 @@ export const InputField: FC<IInputFieldProps> = ({
   updateValue,
 }) => {
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <label htmlFor="" className="form__label">
+    <form className='form' onSubmit={handleSubmit}>
+      <label htmlFor='' className='form__label'>
         <input
-          type="text"
-          className="form__input"
+          type='text'
+          className='form__input'
           value={value}
           onChange={(e) => updateValue(e.target.value)}
         />
-        <button type="submit" className="form__submit" disabled={!value}>
+        <button type='submit' className='form__submit' disabled={!value}>
           add todo
         </button>
       </label>

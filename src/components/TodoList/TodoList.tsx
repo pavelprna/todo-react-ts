@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { TodoItem } from '../TodoItem/TodoItem'
 import { useAppSelector } from '../../hooks/hooks'
+import './TodoList.css'
 
 export const TodoList: FC = () => {
   const todos = useAppSelector((state) => state.todos.todos)

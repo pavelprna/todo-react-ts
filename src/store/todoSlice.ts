@@ -23,7 +23,9 @@ export const fetchTodos = createAsyncThunk(
   'todos/fetchTodos',
   async function (_, { rejectWithValue }) {
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+      const response = await fetch(
+        'https://jsonplaceholder.typicode.com/todos?_limit=7'
+      )
       if (!response.ok) throw new Error('Не удалось загрузить данные с сервера')
       const data = await response.json()
 
